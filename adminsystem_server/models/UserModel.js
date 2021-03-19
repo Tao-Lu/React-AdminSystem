@@ -32,7 +32,7 @@ UserModel.findOne({ username: 'admin' }).then((user) => {
   if (!user) {
     UserModel.create({ username: 'admin', password: md5('admin') })
       .then(() => {
-        console.log('初始化用户: 用户名: admin 密码为: admin');
+        console.log('default user: username: admin password: admin');
       });
   }
 });
